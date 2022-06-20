@@ -1,7 +1,7 @@
 import { Register } from "../Types/Register";
 
 export const registers: Register[] = [
-  {
+  /*  {
     date: new Date(2022, 5, 20),
     category: "food",
     title: "Delivery Flash",
@@ -30,5 +30,5 @@ export const registers: Register[] = [
     category: "salary",
     title: "Salario",
     value: 1500,
-  },
+  }, */
 ];

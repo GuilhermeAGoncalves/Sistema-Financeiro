@@ -55,3 +55,14 @@ export const formatCurrentMonth = (currentMonth: string): string => {
 
   return `${months[parseInt(month) - 1]} - ${year}`;
 };
+
+export const getFullDate = (date: string) => {
+  const [year, month, day] = date.split("-");
+  let dateComplete = new Date(
+    parseInt(year),
+    parseInt(month) - 1,
+    parseInt(day)
+  );
+
+  return dateComplete;
+};

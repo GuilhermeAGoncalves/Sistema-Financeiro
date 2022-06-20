@@ -4,9 +4,10 @@ import { registers } from "./Data/registers";
 import { Category } from "./Types/Category";
 import { categories } from "./Data/categories";
 import { useEffect, useState } from "react";
-import { getCurrentMonth, filterListByMonth } from "./helpers/dataFilter";
-import { TableArea } from "./components/TableArea/TableArea.component";
-import { InfoArea } from "./components/InfoArea/InfoArea.components";
+import { getCurrentMonth, filterListByMonth } from "./Helpers/dataFilter";
+import { TableArea } from "./Components/TableArea/TableArea.component";
+import { InfoArea } from "./Components/InfoArea/InfoArea.components";
+import { AddArea } from "./Components/AddArea/AddArea.component";
 
 function App() {
   const [listRegister, setListRegister] = useState(registers);
@@ -39,10 +40,16 @@ function App() {
     setCurrentMonth(newMonth);
   };
 
+  const addRegister = (register: Register) => {
+    const newList = [...listRegister];
+    newList.push(register);
+    setListRegister(newList);
+  };
+
   return (
     <C.Container>
       <C.Header>
-        <C.Title>Sistema Financeiro</C.Title>
+        <C.Title>Descontrole Financeiro</C.Title>
       </C.Header>
 
       <C.Body>
@@ -53,7 +60,7 @@ function App() {
           expense={expense}
         />
 
-        {/* Area de inserir */}
+        <AddArea onAddRegister={addRegister} />
 
         <TableArea listRegister={filteredList} />
       </C.Body>
