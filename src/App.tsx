@@ -1,7 +1,6 @@
 import * as C from "./App.style";
 import { Register } from "./Types/Register";
 import { registers } from "./Data/registers";
-import { Category } from "./Types/Category";
 import { categories } from "./Data/categories";
 import { useEffect, useState } from "react";
 import { getCurrentMonth, filterListByMonth } from "./Helpers/dataFilter";

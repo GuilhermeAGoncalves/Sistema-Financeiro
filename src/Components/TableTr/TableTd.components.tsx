@@ -1,6 +1,6 @@
 import * as C from "./TableTd.style";
 import { Register } from "../../Types/Register";
-import { formatDate } from "../../helpers/dataFilter";
+import { formatDate } from "../../Helpers/dataFilter";
 import { categories } from "../../Data/categories";
 
 type Props = {

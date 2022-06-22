@@ -2,7 +2,7 @@
 import * as React from "react";
 import * as C from "./InfoArea.style";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import { formatCurrentMonth } from "../../helpers/dataFilter";
+import { formatCurrentMonth } from "../../Helpers/dataFilter";
 import { Resume } from "../Resume/Resume.components";
 
 type Props = {
